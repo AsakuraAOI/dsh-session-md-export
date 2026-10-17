@@ -1,0 +1,58 @@
+{
+  "name": "dsh-session-md-export",
+  "version": "0.2.2",
+  "private": true,
+  "type": "module",
+  "description": "Export the current DSH Session trajectory as a Markdown file from the Session header.",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    },
+    "compatibility": {
+      "dsh": "0.2.1-rc.1 || 0.2.1-rc.2",
+      "node": ">=22.19",
+      "profiles": [
+        "web"
+      ]
+    }
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "3.18.5"
+  },
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "3.18.5"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsakuraAOI/dsh-session-md-export.git"
+  },
+  "homepage": "https://github.com/AsakuraAOI/dsh-session-md-export#readme",
+  "bugs": {
+    "url": "https://github.com/AsakuraAOI/dsh-session-md-export/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness"
+  ]
+}

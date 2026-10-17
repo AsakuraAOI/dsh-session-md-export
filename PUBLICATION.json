@@ -1,0 +1,24 @@
+{
+  "sourceCommit": "25a556d876f520b11cd9b984d1445a7d5d8fd019",
+  "sourceDirectoryDigest": "5d0e403f7244f3de231ba0cffacb6546189883d7a289639290cef3d7c0fb4131",
+  "version": "0.2.2",
+  "sourceHashes": {
+    "README.md": "b9d17ee6bfe20e704f36f6b7bb5143910b06e6a045cbc7afdf2ae5f19c18f912",
+    "client.js": "b681cfb8dd30bf761fd8fd59a2373b922e4e3a283984077e3489c030b8a997aa",
+    "cordis.patch.yml": "a028b73d637a6c44f670e94153b22799e21136b27bcb1319ea5cd1044765bdec",
+    "index.js": "38a4cb5ec0490731dd0c7e542d15f2adf79af6fc61b1acc1308a7e6cd738b521",
+    "lib/markdown.js": "86cdf5ccf04f0db8264a26575a47218ef79dc66ba6348538940ca6d746c64980",
+    "package-lock.json": "272c5d3bd9703dcb41ec2c3d1b2b261528a388a164d545e47813fe3fc026b481",
+    "package.json": "5100db107ec43b2382c58979152bda88b0bd0b444bf6ca742a59b503e7561473",
+    "scripts/render-cli.mjs": "87a9c91bf96b3dc5a099edab1e39aa71714db89221a12ce9cd9125b0bfb9fdc6",
+    "tests/configuration.test.js": "cd6a2509b81663594803ed9651bf6f9741e9ccbfb1b808c6dcbdee9f6e285284",
+    "tests/download.test.js": "747d1d98d97077289a5e4e968a5478f1c5bbdc3a0fba2be88ad516df7e81ee34"
+  },
+  "transforms": [
+    "Kasumi public package/display naming",
+    "repository metadata and installation documentation",
+    "Bilibili dependency pinned to public version tag where applicable",
+    "personal paths anonymized in documentation/baselines"
+  ],
+  "compatibility": "Upstream protocol, credentials, provider and internal IDs retained"
+}
