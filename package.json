@@ -1,6 +1,6 @@
 {
   "name": "dsh-session-md-export",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "private": true,
   "type": "module",
   "description": "Export the current DSH Session trajectory as a Markdown file from the Session header.",
@@ -15,17 +15,25 @@
     "client.js",
     "lib",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "plugin-settings.js",
+    "settings-ui.js",
+    "scripts/build-settings.mjs",
+    "client-base.js"
   ],
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
     },
     "client": {
-      "platform": "web"
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-plugin-manager"
+      ]
     },
     "compatibility": {
-      "dsh": "0.2.1-rc.1 || 0.2.1-rc.2",
+      "dsh": "0.2.1-rc.1 || 0.2.1-rc.2 || 0.2.1-rc.3 || 0.2.1-rc.4 || 0.2.1-rc.5",
       "node": ">=22.19",
       "profiles": [
         "web"
@@ -40,7 +48,9 @@
     "@deepseek-ai/schemastery": "3.18.5"
   },
   "scripts": {
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "build:settings": "node scripts/build-settings.mjs",
+    "build": "npm run build:settings"
   },
   "repository": {
     "type": "git",
@@ -54,5 +64,23 @@
     "dsh",
     "dsh-plugin",
     "deepseek-harness"
-  ]
+  ],
+  "pluginPage": {
+    "name": "dsh-session-md-export",
+    "title": "会话 Markdown 导出",
+    "route": "/api/plugins/dsh-session-md-export/settings",
+    "titles": {
+      "kasumi-retry": "Kasumi 重试与续写",
+      "hiagent-global": "Kasumi 全局适配",
+      "hiagent-global-compaction": "全局压缩",
+      "hiagent-observability": "性能观测",
+      "hiagent-recovery": "恢复保护",
+      "hiagent-query-budget": "请求预算",
+      "bilibili-account": "B站账号与视频阅读",
+      "hiagent-web-search": "网页搜索与读取",
+      "seeit-video": "Seeit 视频理解",
+      "session-md-export": "导出选项",
+      "kasumiflow": "学习事务与课程资料"
+    }
+  }
 }

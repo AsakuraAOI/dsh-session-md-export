@@ -1,3 +1,4 @@
+import { registerPluginSettings } from "./plugin-settings.js";
 /**
  * Host half: authenticated Markdown export route for one Session trajectory.
  *
@@ -131,6 +132,7 @@ export async function sessionMarkdownResponse(ctx, request, config = {}) {
  * headers as GET so the browser half can preflight before starting a download.
  */
 export function apply(ctx, config = {}) {
+  registerPluginSettings(ctx);
   ctx.effect(() =>
     ctx.connection.fetch.register({
       path: SESSION_MD_EXPORT_PATH,
