@@ -8,7 +8,7 @@
 dsh plugin --profile desktop add 'github:AsakuraAOI/dsh-session-md-export'
 ```
 
-支持 **DSH 0.2.1-rc.1 / rc.2 / rc.3 / rc.4 / rc.5**。安装后按管理器提示重启，在会话头部点击新增的下载图标：
+支持 **DSH 0.2.1-rc.1 / rc.2 / rc.3 / rc.4 / rc.5 及 0.2.2-rc.1**。安装后按管理器提示重启，在会话头部点击新增的下载图标：
 
 - **纯轨迹**：用户消息、助手回复、工具调用与结果。
 - **含思考过程**：额外输出日志中保存的思考块。

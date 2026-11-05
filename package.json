@@ -1,6 +1,6 @@
 {
   "name": "dsh-session-md-export",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
   "type": "module",
   "description": "Export the current DSH Session trajectory as a Markdown file from the Session header.",
@@ -33,7 +33,7 @@
       ]
     },
     "compatibility": {
-      "dsh": "0.2.1-rc.1 || 0.2.1-rc.2 || 0.2.1-rc.3 || 0.2.1-rc.4 || 0.2.1-rc.5",
+      "dsh": "0.2.1-rc.1 || 0.2.1-rc.2 || 0.2.1-rc.3 || 0.2.1-rc.4 || 0.2.1-rc.5 || 0.2.2-rc.1",
       "node": ">=22.19",
       "profiles": [
         "web"
@@ -42,7 +42,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@deepseek-ai/schemastery": "3.18.5"
+    "@deepseek-ai/schemastery": "3.18.5 || 3.19.0"
   },
   "devDependencies": {
     "@deepseek-ai/schemastery": "3.18.5"
